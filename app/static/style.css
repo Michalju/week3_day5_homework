@@ -1,6 +1,29 @@
-body{
-font-family: 'Times New Roman', Times, serif;
-font-size: 24;
-
-
+p{
+    color:rgb(84, 3, 3);
 }
+
+.wrapper {
+    /* layout */
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    /* content styling OPTIONAL*/
+    align-items: center;
+    justify-content: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: larger;
+
+
+    height: 400px;
+    min-width: 100px;
+
+    /* background styling */   
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url("blank_card.jpg");
+  }
+  #double{
+    display: flex;
+    flex-direction: row;
+ 
+  }

@@ -3,20 +3,23 @@
 
 {% block content %}
 <section>
-    <div>
+    <div class = "wrapper">
+        <!-- <p><img src='{{url_for('static', filename='blank_card.jpg')}}' alt="empty card"></p> -->
         <p>Game</p>         
         <p>{{game.name}} </p>
         <p>was played between:</p>
     </div>
-    <div>
-        <p>Player 1: {{game.player_1.name}}</p>         
-        <p>Which has chosen: {{game.player_1.choice}}</p>
+    <div id="double">
+        <div class = "wrapper">
+            <p>Player 1: {{game.player_1.name}}</p>         
+            <p>Which has chosen: {{game.player_1.choice}}</p>
+        </div>
+        <div class = "wrapper">
+            <p>Player 2: {{game.player_2.name}}</p>         
+            <p>Which has chosen: {{game.player_2.choice}}</p>
+        </div>
     </div>
-    <div>
-        <p>Player 2: {{game.player_2.name}}</p>         
-        <p>Which has chosen: {{game.player_2.choice}}</p>
-    </div>
-    <div>
+    <div class = "wrapper">
         <p>Result:</p>         
         <p>{{game._result}}</p>
     </div>
