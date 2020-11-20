@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<form action="/game_result" method="POST">
+    <label for="p1_name">Player 1 name: </label>
+    <input type="text" name="player_1_name" id="p1_name">
+    <label for="p1_choice">Player 1 choice: </label>
+    <input type="text" name="player_1_choice" id="p1_choice">
+    <br>
+    <label for="p2_name">Player 2 name: </label>
+    <input type="text" name="player_2_name" id="p2_name">
+    <label for="p2_choice">Player 2 choice: </label>
+    <input type="text" name="player_2_choice" id="p2_choice">
+    <br>
+    <input type="submit" value="Play">
+
+
+</form>
+
+{% endblock %}
