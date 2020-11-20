@@ -1,8 +1,11 @@
-img{
+#img_small{
     width: 100px;
     height: 100px;
 }
-
+#main_logo{
+  width: 500px;
+  height: 500px;
+}
 .wrapper{
     /* layout */
     display: flex;

@@ -14,13 +14,13 @@
             <p class="p_cards">Player 1:</p>
             <p class="p_cards">{{game.player_1.name}}</p>        
             <p class="p_cards">Has chosen:</p>
-            <img src='{{url_for("static", filename=game.player_1.choice+".png")}}' alt="{{game.player_1.choice}}">
+            <img id="img_small" src='{{url_for("static", filename=game.player_1.choice+".png")}}' alt="{{game.player_1.choice}}">
         </div>
         <div class = "wrapper">
             <p class="p_cards">Player 2:</p>
             <p class="p_cards">{{game.player_2.name}}</p>        
             <p class="p_cards">Has chosen:</p>
-            <img src='{{url_for("static", filename=game.player_2.choice+".png")}}' alt="{{game.player_2.choice}}">
+            <img id="img_small" src='{{url_for("static", filename=game.player_2.choice+".png")}}' alt="{{game.player_2.choice}}">
              
         </div>
     </div>

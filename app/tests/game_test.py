@@ -23,28 +23,58 @@ class TestGame(unittest.TestCase):
         self.assertEqual(self.game._result, "Gandalf won the game")
 
     def test_game_tie(self):
-        self.game1 = Game(
-            "Our first game", Player("Sauron", "rock"), Player("Gandalf", "rock")
-        )
+        self.game1 = Game("Our first game",\
+                            Player("Sauron", "rock"),\
+                            Player("Gandalf", "rock"))
         self.game1.play()
         self.assertEqual(self.game1._result, "None won the game")
 
-        self.game2 = Game(
-            "Our first game", Player("Sauron", "paper"), Player("Gandalf", "paper")
-        )
+        self.game2 = Game("Our first game",\
+                            Player("Sauron", "paper"),\
+                            Player("Gandalf", "paper"))
         self.game2.play()
         self.assertEqual(self.game2._result, "None won the game")
 
-        self.game3 = Game(
-            "Our first game",
-            Player("Sauron", "scissors"),
-            Player("Gandalf", "scissors"),
-        )
+        self.game3 = Game("Our first game",\
+                            Player("Sauron", "scissors"),\
+                            Player("Gandalf", "scissors"))
         self.game3.play()
         self.assertEqual(self.game3._result, "None won the game")
 
     def test_game_player1_win(self):
-        pass
+        self.game1 = Game("Our first game",\
+                            Player("Sauron", "rock"),\
+                            Player("Gandalf", "scissors"))
+        self.game1.play()
+        self.assertEqual(self.game1._result, "Sauron won the game")
+
+        self.game2 = Game("Our first game",\
+                            Player("Sauron", "paper"),\
+                            Player("Gandalf", "rock"))
+        self.game2.play()
+        self.assertEqual(self.game2._result, "Sauron won the game")
+
+        self.game3 = Game("Our first game",\
+                            Player("Sauron", "scissors"),\
+                            Player("Gandalf", "paper"))
+        self.game3.play()
+        self.assertEqual(self.game3._result, "Sauron won the game")
 
     def test_game_player2_win(self):
-        pass
+        self.game1 = Game("Our first game",\
+                            Player("Sauron", "scissors"),\
+                            Player("Gandalf", "rock"))
+        self.game1.play()
+        self.assertEqual(self.game1._result, "Gandalf won the game")
+
+        self.game2 = Game("Our first game",\
+                            Player("Sauron", "rock"),\
+                            Player("Gandalf", "paper"))
+        self.game2.play()
+        self.assertEqual(self.game2._result, "Gandalf won the game")
+
+        self.game3 = Game("Our first game",\
+                            Player("Sauron", "paper"),\
+                            Player("Gandalf", "scissors"))
+        self.game3.play()
+        self.assertEqual(self.game3._result, "Gandalf won the game")
