@@ -1,0 +1,26 @@
+
+{% extends "base.html" %}
+
+{% block content %}
+<section>
+    <div>
+        <p>Game</p>         
+        <p>{{game.name}} </p>
+        <p>was played between:</p>
+    </div>
+    <div>
+        <p>Player 1: {{game.player_1.name}}</p>         
+        <p>Which has chosen: {{game.player_1.choice}}</p>
+    </div>
+    <div>
+        <p>Player 2: {{game.player_2.name}}</p>         
+        <p>Which has chosen: {{game.player_2.choice}}</p>
+    </div>
+    <div>
+        <p>Result:</p>         
+        <p>{{game._result}}</p>
+    </div>
+
+</section>
+    
+{% endblock %}
