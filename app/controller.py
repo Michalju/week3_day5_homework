@@ -3,10 +3,16 @@ from app import app
 from app.models.game import Game
 from app.models.player import Player
 
+@app.route('/')
+def index():
+    return render_template('index.html')
 
+@app.route('/about')
+def about():
+    return render_template('about.html')
 
 @app.route('/<player_1_choice>/<player_2_choice>')
-def index(player_1_choice,player_2_choice):
+def play_game(player_1_choice,player_2_choice):
     player_1 = Player ("Boris the blade", player_1_choice)
     player_2 = Player ("Batman", player_2_choice)
     r_p_s = Game("Rock Paper Scissors", player_1, player_2)

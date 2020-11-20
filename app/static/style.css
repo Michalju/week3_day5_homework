@@ -1,29 +1,76 @@
-p{
-    color:rgb(84, 3, 3);
+img{
+    width: 100px;
+    height: 100px;
 }
 
-.wrapper {
+.wrapper{
     /* layout */
     display: flex;
-    flex: 1;
+ 
+    /* flex: 1; */
     flex-direction: column;
     /* content styling OPTIONAL*/
-    align-items: center;
+     align-items: center;
     justify-content: center;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size: larger;
-
-
+    /*align-self: center; */
     height: 400px;
-    min-width: 100px;
-
+    width: 240px;    
     /* background styling */   
     background-position: center;
     background-repeat: no-repeat;
-    background-image: url("blank_card.jpg");
+    background-image: url("blank_card.jpg"); 
   }
+
   #double{
     display: flex;
-    flex-direction: row;
- 
+    flex-direction: row; 
+  }
+
+ section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(246, 221, 188);
+  } 
+  .p_cards{
+      width: 200;
+      word-wrap: break-word;
+      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+      font-size: 18pt;
+      font-weight: bold;
+      color: black;
+      text-align: center;
+       
+  }
+  .navigation_top nav{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    margin: 0; 
+    padding-left: 10px;
+    background: rgb(112, 77, 31);
+    align-items: center;    
+  }
+  .navigation_top ul{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-end;
+    list-style: none;
+    margin: 0; 
+  }
+  .navigation_top h2 {
+    color: rgb(246, 221, 188);
+    display: block;
+  }
+  .navigation_top a {
+    text-decoration: none;
+    display: block;
+    padding-right: 1em;
+    padding-left: 1em;
+    padding-top: 1.5em;
+    padding-bottom: 1.5em;
+    color: rgb(246, 221, 188);
+  }
+  .navigation_top a:hover {
+    background:  rgb(103, 59, 1);
   }

@@ -5,23 +5,28 @@
 <section>
     <div class = "wrapper">
         <!-- <p><img src='{{url_for('static', filename='blank_card.jpg')}}' alt="empty card"></p> -->
-        <p>Game</p>         
-        <p>{{game.name}} </p>
-        <p>was played between:</p>
+        <p class="p_cards">Game</p>         
+        <p class="p_cards">{{game.name}} </p>
+        <p class="p_cards">was played between:</p>
     </div>
     <div id="double">
         <div class = "wrapper">
-            <p>Player 1: {{game.player_1.name}}</p>         
-            <p>Which has chosen: {{game.player_1.choice}}</p>
+            <p class="p_cards">Player 1:</p>
+            <p class="p_cards">{{game.player_1.name}}</p>        
+            <p class="p_cards">Has chosen:</p>
+            <img src='{{url_for("static", filename=game.player_1.choice+".png")}}' alt="{{game.player_1.choice}}">
         </div>
         <div class = "wrapper">
-            <p>Player 2: {{game.player_2.name}}</p>         
-            <p>Which has chosen: {{game.player_2.choice}}</p>
+            <p class="p_cards">Player 2:</p>
+            <p class="p_cards">{{game.player_2.name}}</p>        
+            <p class="p_cards">Has chosen:</p>
+            <img src='{{url_for("static", filename=game.player_2.choice+".png")}}' alt="{{game.player_2.choice}}">
+             
         </div>
     </div>
     <div class = "wrapper">
-        <p>Result:</p>         
-        <p>{{game._result}}</p>
+        <p class="p_cards">Result:</p>         
+        <p class="p_cards">{{game._result}}</p>
     </div>
 
 </section>
