@@ -13,14 +13,25 @@ def about():
 
 @app.route('/play_game')
 def play_game():
-    return render_template('play_game.html')
+    return render_template('play_game.html', two_players=True)
+
+@app.route('/play_game_solo')
+def play_game_solo():
+    return render_template('play_game.html', two_players=False)
 
 @app.route('/game_result', methods=["POST"])
 def game_result():
     form_data = request.form 
  
     player_1 = Player (form_data['player_1_name'], form_data['player_1_choice'])
-    player_2 = Player (form_data['player_2_name'], form_data['player_2_choice'])
+    print (form_data['computer'])
+    print(type(form_data['computer']))
+    if form_data['computer']=='1':
+        player_2 = Player ("Computer", "")
+        player_2.computer()       
+    else:
+        player_2 = Player (form_data['player_2_name'], form_data['player_2_choice'])
+
     r_p_s = Game("Rock Paper Scissors", player_1, player_2)
     r_p_s.play()
     return render_template('result.html', game = r_p_s)

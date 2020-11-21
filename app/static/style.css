@@ -77,3 +77,65 @@
   .navigation_top a:hover {
     background:  rgb(103, 59, 1);
   }
+  .play_game_player{
+    /* layout */
+    display: flex;
+ 
+    /* flex: 1; */
+    flex-direction: column;
+    /* content styling OPTIONAL*/
+     align-items: center;
+    justify-content: center;
+    /*align-self: center; */
+    height: 400px;
+    width: 240px;    
+    /* background styling */   
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url("blank_card.jpg"); 
+  }
+
+  #play_game_2_players{
+    display: flex;
+    flex-direction: row; 
+  }
+
+  label{
+    width: 200;
+    word-wrap: break-word;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 18pt;
+    font-weight: bold;
+    color: black;
+    text-align: center;
+  }
+.card_header  {
+  width: 200;
+  word-wrap: break-word;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 25pt;
+  font-weight: bold;
+  color: black;
+  text-align: center;
+}
+
+#play_button{
+  width: 200;
+  word-wrap: break-word;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 25pt;
+  font-weight: bold;
+  color: rgb(246, 221, 188);
+  text-align: center;
+  background-color: rgb(112, 77, 31);
+  }
+#play_button:hover {
+    background:  black;
+  }
+
+#play_game_view{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgb(246, 221, 188);
+}

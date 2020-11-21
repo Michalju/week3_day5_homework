@@ -2,26 +2,41 @@
 
 {% block content %}
 
-<form action="/game_result" method="POST">
-    <label for="p1_name">Player 1 name: </label>
-    <input type="text" name="player_1_name" id="p1_name">
-    <label for="p1_choice">Player 1 choice: </label>
-    <select id="p1_choice" name="player_1_choice">
-        <option value="rock">Rock</option>
-        <option value="paper">Paper</option>
-        <option value="scissor">Scissor</option>
-    </select>
-    <br>
-    <label for="p2_name">Player 2 name: </label>
-    <input type="text" name="player_2_name" id="p2_name">
-    <label for="p2_choice">Player 2 choice: </label>
-    <select id="p2_choice" name="player_2_choice">
-        <option value="rock">Rock</option>
-        <option value="paper">Paper</option>
-        <option value="scissors">Scissors</option>
-    </select>
-    <br>
-    <input type="submit" value="Play">
+
+<form id="play_game_view" action="/game_result" method="POST">
+    <div id="play_game_2_players">
+        <div class="play_game_player">
+            <p class="card_header">Player 1</p>
+            <label for="p1_name">Name: </label>
+            <input type="text" name="player_1_name" id="p1_name">
+            <label for="p1_choice">Choice: </label>
+            <select id="p1_choice" name="player_1_choice">
+                <option value="rock">Rock</option>
+                <option value="paper">Paper</option>
+                <option value="scissors">Scissors</option>
+            </select>
+        </div>
+        {% if two_players: %}
+        <div class="play_game_player">
+            <p class="card_header">Player 2</p>
+            <label for="p2_name">Name: </label>
+            <input type="text" name="player_2_name" id="p2_name">
+            <input type="hidden" name="computer" value=0>
+            <label for="p2_choice">Choice: </label>
+            <select id="p2_choice" name="player_2_choice">
+                <option value="rock">Rock</option>
+                <option value="paper">Paper</option>
+                <option value="scissors">Scissors</option>
+            </select>
+        </div>
+        {% else %}
+        <div class="play_game_player">
+            <p class="card_header">Computer</p>
+            <input type="hidden" name="computer" value=1>
+        </div>       
+        {% endif %}
+    </div>
+    <input id="play_button" type="submit" value="Play">
 
 
 </form>
