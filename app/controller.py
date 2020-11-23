@@ -24,8 +24,6 @@ def game_result():
     form_data = request.form 
  
     player_1 = Player (form_data['player_1_name'], form_data['player_1_choice'])
-    print (form_data['computer'])
-    print(type(form_data['computer']))
     if form_data['computer']=='1':
         player_2 = Player ("Computer", "")
         player_2.computer()       
